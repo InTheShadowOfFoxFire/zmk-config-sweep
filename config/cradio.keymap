@@ -32,9 +32,9 @@
 
         default_layer {
             bindings = <
-&kp J  &kp F  &kp M  &kp P    &kp V        &kp SEMICOLON  &kp HASH    &kp ASTERISK  &kp O  &kp P
-&kp R  &kp S  &kp N  &kp D    &kp B        &kp SLASH      &kp A       &kp E         &kp I  &kp H
-&kp X  &kp G  &kp L  &kp C    &kp W        &kp PLUS       &kp U       &kp O         &kp Y  &kp K
+&kp J  &kp F  &kp M  &kp P    &kp V        &kp SEMICOLON  &kp HASH    &kp Q  &kp O  &kp Z
+&kp R  &kp S  &kp N  &kp D    &kp B        &kp COMMA      &kp A       &kp E  &kp I  &kp H
+&kp X  &kp G  &kp L  &kp C    &kp W        &kp PERIOD     &kp U       &kp O  &kp Y  &kp K
                      &lt 2 T  &kp ENTER    &kp SPACE      &lt 1 BSPC
             >;
         };
