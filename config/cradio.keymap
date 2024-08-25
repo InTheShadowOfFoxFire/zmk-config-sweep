@@ -39,9 +39,9 @@
 
         default_layer {
             bindings = <
-&kp J  &kp F  &kp M  &kp P      &kp C_REPEAT    &kp C_REPEAT  &kp HASH    &kp Q  &kp V  &kp Z
+&kp J  &kp F  &kp M  &kp P      &kp C_REPEAT    &kp C_REPEAT  &kp HASH    &kp Y  &kp V  &kp Z
 &kp R  &kp S  &kp N  &kp D      &kp B           &kp COMMA     &kp A       &kp E  &kp I  &kp H
-&kp X  &kp G  &kp L  &kp C      &kp W           &kp PERIOD    &kp U       &kp O  &kp Y  &kp K
+&kp X  &kp G  &kp L  &kp C      &kp W           &kp PERIOD    &kp O       &kp U  &kp Q  &kp K
                      &kp ENTER  &lt 2 T         &tabs_td      &lt 1 BSPC
             >;
         };
