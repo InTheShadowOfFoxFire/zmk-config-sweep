@@ -16,6 +16,13 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
+
+        tabs_td: tabs_td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TABS_TD";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&kp TAB>;
+        };
     };
 
     conditional_layers {
@@ -32,18 +39,18 @@
 
         default_layer {
             bindings = <
-&kp J  &kp F  &kp M  &kp P    &kp V        &kp SEMICOLON  &kp HASH    &kp Q  &kp O  &kp Z
-&kp R  &kp S  &kp N  &kp D    &kp B        &kp COMMA      &kp A       &kp E  &kp I  &kp H
-&kp X  &kp G  &kp L  &kp C    &kp W        &kp PERIOD     &kp U       &kp O  &kp Y  &kp K
-                     &lt 2 T  &kp ENTER    &kp SPACE      &lt 1 BSPC
+&kp J  &kp F  &kp M  &kp P    &kp C_REPEAT    &kp C_REPEAT  &kp HASH    &kp Q  &kp V  &kp Z
+&kp R  &kp S  &kp N  &kp D    &kp B           &kp COMMA     &kp A       &kp E  &kp I  &kp H
+&kp X  &kp G  &kp L  &kp C    &kp W           &kp PERIOD    &kp U       &kp O  &kp Y  &kp K
+                     &lt 2 T  &kp ENTER       &tabs_td      &lt 1 BSPC
             >;
         };
 
         right_layer {
             bindings = <
-&kp INS     &kp N1  &kp N2  &kp N3  &trans     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END   &kp COLON
-&kp DEL     &kp N4  &kp N5  &kp N6  &trans     &kp LARW  &kp DARW   &kp UARW   &kp RARW  &kp SEMI
-&caps_word  &kp N7  &kp N8  &kp N9  &kp N0     &trans    &trans     &trans     &trans    &trans
+&kp INS     &kp N1  &kp N2  &kp N3  &trans     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+&kp DEL     &kp N4  &kp N5  &kp N6  &trans     &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp SEMI
+&caps_word  &kp N7  &kp N8  &kp N9  &kp N0     &trans    &trans     &trans     &trans     &trans
                             &trans  &kp ESC    &trans    &trans
             >;
         };
