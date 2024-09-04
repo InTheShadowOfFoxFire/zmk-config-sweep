@@ -70,7 +70,7 @@
             bindings = <
 &kp J        &kp F        &kp M        &kp P        &kp C_REPEAT    &kp C_REPEAT      &kp SINGLE_QUOTE        &kp Y        &kp V  &kp Z
 &ht LC(S) R  &ht LC(X) S  &ht LC(V) N  &ht LC(C) D  &ht LC(A) B     &ht SEMI COMMA    &ht LC(F) A             &ht LC(Z) E  &kp I  &sk_ht LEFT_SHIFT H
-&sl_ht 3 X   &kp G        &kp L        &kp C        &kp W           &ht SLASH PERIOD  &ht LC(R) O             &ht LC(Y) U  &kp Q  &kp K
+&lt 3 X      &kp G        &kp L        &kp C        &kp W           &ht SLASH PERIOD  &ht LC(R) O             &ht LC(Y) U  &kp Q  &kp K
                                        &kp ENTER    &sl_ht 2 T      &l_sp_tab_td      &ht LC(BACKSPACE) BSPC
             >;
         };
