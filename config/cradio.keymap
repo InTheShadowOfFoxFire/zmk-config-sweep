@@ -22,6 +22,8 @@
             label = "L_SP_TAB_TD";
             #binding-cells = <0>;
             bindings = <&lt 1 SPACE>, <&kp TAB>;
+
+            tapping-term-ms = <200>;
         };
 
         h_caps_td: h_caps_td {
