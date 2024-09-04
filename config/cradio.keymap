@@ -17,11 +17,11 @@
             bindings = <&kp>, <&kp>;
         };
 
-        tabs_td: tabs_td {
+        l_sp_tab_td: l_sp_tab_td {
             compatible = "zmk,behavior-tap-dance";
-            label = "TABS_TD";
+            label = "L_SP_TAB_TD";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp TAB>;
+            bindings = <&lt 1 SPACE>, <&kp TAB>;
         };
 
         h_caps_td: h_caps_td {
@@ -29,6 +29,24 @@
             label = "H_CAPS_TD";
             #binding-cells = <0>;
             bindings = <&kp H>, <&sk LSHIFT>;
+        };
+
+        sl_ht: sl_ht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SL_HT";
+            bindings = <&sl>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        sk_ht: sk_ht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SK_HT";
+            bindings = <&sk>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
         };
     };
 
@@ -46,19 +64,19 @@
 
         default_layer {
             bindings = <
-&kp J  &kp F  &kp M        &kp P        &kp C_REPEAT    &kp C_REPEAT  &kp SINGLE_QUOTE  &kp Y  &kp V  &kp Z
-&kp R  &kp S  &ht LC(V) N  &ht LC(C) D  &ht LC(A) B     &kp COMMA     &kp A             &kp E  &kp I  &h_caps_td
-&kp X  &kp G  &kp L        &kp C        &kp W           &kp PERIOD    &kp O             &kp U  &kp Q  &kp K
-                           &kp ENTER    &lt 2 T         &tabs_td      &lt 1 BSPC
+&kp J        &kp F        &kp M        &kp P        &kp C_REPEAT    &kp C_REPEAT      &kp SINGLE_QUOTE  &kp Y        &kp V  &kp Z
+&ht LC(S) R  &ht LC(X) S  &ht LC(V) N  &ht LC(C) D  &ht LC(A) B     &ht LC(Z) SEMI    &ht LC(F) A       &ht LC(Z) E  &kp I  &sk_ht LEFT_SHIFT H
+&kp X        &kp G        &kp L        &kp C        &kp W           &ht PERIOD SLASH  &kp O             &kp U        &kp Q  &kp K
+                                       &kp ENTER    &sl_ht 2 T      &l_sp_tab_td      &lt 1 BSPC
             >;
         };
 
         right_layer {
             bindings = <
-&kp INS     &kp N1  &kp N2  &kp N3  &trans     &kp HOME  &kp PG_DN  &kp PG_UP     &kp END   &kp COLON
-&kp DEL     &kp N4  &kp N5  &kp N6  &trans     &trans    &kp LEFT   &kp UP_ARROW  &kp DOWN  &kp RIGHT
-&caps_word  &kp N7  &kp N8  &kp N9  &kp N0     &trans    &trans     &trans        &trans    &trans
-                            &trans  &kp ESC    &trans    &trans
+&kp INS     &kp N1  &kp N2  &kp N3  &trans     &kp HOME         &kp PG_DN  &kp PG_UP     &kp END   &kp COLON
+&kp DEL     &kp N4  &kp N5  &kp N6  &trans     &kp LC(LA(TAB))  &kp LEFT   &kp UP_ARROW  &kp DOWN  &kp RIGHT
+&caps_word  &kp N7  &kp N8  &kp N9  &kp N0     &trans           &trans     &trans        &trans    &trans
+                            &trans  &kp ESC    &trans           &trans
             >;
         };
 
